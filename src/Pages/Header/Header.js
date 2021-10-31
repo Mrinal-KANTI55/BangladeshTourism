@@ -1,8 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/UseAuth/UseAuth';
+
 
 const Header = () => {
+     const { user, signOutButton } = useAuth ();
     return (
         <div>
             <h2>header</h2>
@@ -15,9 +18,14 @@ const Header = () => {
                             <Link className="text-decoration-none text-light mx-2" to='/home'>Home</Link>
                             <Link className="text-decoration-none text-light mx-2" to='/tourismoffer'>Tourism Offer</Link>
                             <Link className="text-decoration-none text-light mx-2" to='/addtouroffer'>Add Tour Offer</Link>
+                            <Link className="text-decoration-none text-light mx-2" to='/alluser'>All User</Link>
+                            <Link className="text-decoration-none text-light mx-2" to='/managealloffer'>ManageAllOffer</Link>
+                            <Link className='text-light text-decoration-none me-3' to="/login">{!user.email ? 'Log In' :
+                                <Button onClick={signOutButton} >log Out</Button>}</Link>
                         </Nav>
                         <Nav >
-                            <Nav.Link href="#deets">user name</Nav.Link>
+                            <Link className='text-light text-decoration-none me-3' to="/login">{!user.email ? 'welcome' :
+                                `welcome ${user.displayName}`}</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
