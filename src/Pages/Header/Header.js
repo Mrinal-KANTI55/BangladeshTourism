@@ -16,9 +16,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto text-decoration-none">
                             <Link className="text-decoration-none text-light mx-2" to='/home'>Home</Link>
-                            <Link className="text-decoration-none text-light mx-2" to='/tourismoffer'>Tourism Offer</Link>
-                            <Link className="text-decoration-none text-light mx-2" to='/addtouroffer'>Add Tour Offer</Link>
-                            <Link className="text-decoration-none text-light mx-2" to='/alluser'>All User</Link>
+                            <Link className="text-decoration-none text-light mx-2" to='/tourismoffer'>TourismOffer</Link>
+                            <Link className="text-decoration-none text-light mx-2" to='/addtouroffer'>AddTourOffer</Link>
+                            <Link className="text-decoration-none text-light mx-2" to='/alluser'>AllUser</Link>
                             <Link className="text-decoration-none text-light mx-2" to='/managealloffer'>ManageAllOffer</Link>
                             <Link className='text-light text-decoration-none me-3' to="/login">{!user.email ? 'Log In' :
                                 <Button onClick={signOutButton} >log Out</Button>}</Link>

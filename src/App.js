@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AddTourOffer from './Pages/AddTourOffer/AddTourOffer';
 import AllUser from './Pages/AllUser/AllUser';
+import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
@@ -40,6 +41,7 @@ function App() {
             <SelectOffer></SelectOffer>
           </PrivateRoute>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>
