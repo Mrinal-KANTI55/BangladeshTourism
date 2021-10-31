@@ -13,7 +13,7 @@ const AllUser = () => {
     }, []);
     return (
         <div>
-            <h2>All User {user.length} </h2>
+            <h2 className='mt-5'>All User Information </h2>
             {
                 user.map(userInfo => <SingleUser key={userInfo._id} user={userInfo}></SingleUser>)
             }

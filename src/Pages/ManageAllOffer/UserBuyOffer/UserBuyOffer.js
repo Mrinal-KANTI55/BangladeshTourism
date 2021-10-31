@@ -4,18 +4,21 @@ import { Button, Table } from 'react-bootstrap';
 const UserBuyOffer = (props) => {
     const { _id, userName, userEmail, location_id, userAddress, userPhoneNumber, OrederState } = props.offer;
     const handelDelete = id => {
-        const url = `http://localhost:4000/user/${id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    alert('deleted ');
-                }
-
+        const conform = window.confirm('Are you sure delete this account');
+        if (conform) {
+            const url = `http://localhost:4000/user/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('deleted ');
+                    }
 
+                })
+
+        }
     }
     return (
         <div>
