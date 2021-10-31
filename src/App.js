@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
 import PrivateRoute from './Pages/LogIn/PrivateRoute/PrivateRoute';
 import ManageAllOffer from './Pages/ManageAllOffer/ManageAllOffer';
+import NotFound from './Pages/NotFound/NotFound';
 import SelectOffer from './Pages/TourismOffer/SelectOffer/SelectOffer';
 import TourismOffer from './Pages/TourismOffer/TourismOffer';
 import AuthProvider from './UseContext/AuthProvider';
@@ -19,6 +20,9 @@ function App() {
         <BrowserRouter>
           <Header></Header>
           <Switch>
+          <Route exact path='/'>
+              <Home></Home>
+            </Route>
             <Route path='/home'>
               <Home></Home>
             </Route>
@@ -40,6 +44,9 @@ function App() {
             <PrivateRoute path='/selectoffer/:offerid'>
             <SelectOffer></SelectOffer>
           </PrivateRoute>
+          <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

@@ -14,7 +14,7 @@ const TourismOffer = () => {
     }, []);
     return (
         <div>
-            <h1>TourismOffer {offer.length} </h1>
+            <h1 className='mt-5'>Tour Offer </h1>
             <div className='container my-5'>
 
                 <Row xs={1} md={2} lg={3} className="g-2">

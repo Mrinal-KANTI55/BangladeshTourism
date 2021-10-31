@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 const UserBuyOffer = (props) => {
     const { _id, userName, userEmail, location_id, userAddress, userPhoneNumber, OrederState } = props.offer;
     const handelDelete = id => {
-        const conform = window.confirm('Are you sure delete this account');
+        const conform = window.confirm('Are you sure to delete this Oreder?');
         if (conform) {
             const url = `http://localhost:4000/user/${id}`;
             fetch(url, {

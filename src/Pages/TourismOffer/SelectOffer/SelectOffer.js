@@ -37,18 +37,33 @@ const SelectOffer = () => {
                     <h6> <span className='text-danger'>Around cost</span> : $ {price}</h6>
                 </div>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input value={user.displayName} {...register("userName")} placeholder='userName' />
-                <input value={user.email} {...register("userEmail")} placeholder='userEmail' />
-                <input value={offerid} {...register("location_id")} placeholder='location_id' />
-                <input {...register("userAddress")} placeholder='Address' />
-                <input {...register("userPhoneNumber")} placeholder='userPhoneNumber' />
-                <select {...register("OrederState")}>
-                    <option value="Processing">Processing</option>
-                    <option value="Conform">Conform</option>
-                </select>
-                <input type="submit" />
-            </form>
+            <div className='container mt-5'>
+                <form className="row g-3" onSubmit={handleSubmit(onSubmit)}>
+                    <div className='col-lg-6'>
+                        <input class="form-control" value={user.displayName} {...register("userName")} placeholder='userName' />
+                    </div>
+                    <div className='col-lg-6'>
+                        <input class="form-control" value={user.email} {...register("userEmail")} placeholder='userEmail' />
+                    </div>
+                    <div className='col-lg-12'>
+                        <input class="form-control" value={offerid} {...register("location_id")} placeholder='location_id' />
+                    </div>
+                    <div className='col-lg-6'>
+                        <input class="form-control" {...register("userAddress")} placeholder='Address' />
+                    </div>
+                    <div className='col-lg-6'>
+                        <input class="form-control" {...register("userPhoneNumber")} placeholder='userPhoneNumber' />
+                    </div>
+                    <div className='col-lg-6'>
+                        <select class="form-control" {...register("OrederState")}>
+                            <option value="Processing">Processing</option>
+                            <option value="Conform">Conform</option>
+                        </select>
+                    </div>
+                    <input className='btn btn-primary w-25 text-center' type="submit" />
+                </form>
+
+            </div>
         </div>
     );
 };
