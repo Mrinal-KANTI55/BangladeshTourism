@@ -13,7 +13,7 @@ const ManageAllOffer = () => {
             });
     return (
         <div>
-            <h1>Offer buy {offer.length} </h1>
+            <h1 className='mt-5'> Buy Offer Details </h1>
             <div className='container my-5'>                 
                     {
                         offer.map(offer => <UserBuyOffer key={offer._id} offer={offer}></UserBuyOffer>)
