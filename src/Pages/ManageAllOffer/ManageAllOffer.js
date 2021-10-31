@@ -6,7 +6,7 @@ const ManageAllOffer = () => {
     const { user } = useAuth();
     const [offer, setOffer] = useState([]);
     console.log(user.email);
-        axios.get(`http://localhost:4000/user/${user.email}`)
+        axios.get(`https://gory-phantom-15581.herokuapp.com/user/${user.email}`)
             .then(res => {
                 console.log(res.data);
                 setOffer(res.data);

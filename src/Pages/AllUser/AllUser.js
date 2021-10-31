@@ -5,7 +5,7 @@ import SingleUser from './SingleUser/SingleUser';
 const AllUser = () => {
     const [user, setUser] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:4000/user')
+        axios.get('https://gory-phantom-15581.herokuapp.com/user')
             .then(res => {
                 console.log(res.data);
                 setUser(res.data);

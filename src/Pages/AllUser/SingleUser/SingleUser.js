@@ -18,7 +18,7 @@ const SingleUser = (props) => {
     const handelDelete = id => {
         const conform = window.confirm('Are you sure delete this account');
         if (conform) {
-            const url = `http://localhost:4000/user/${id}`;
+            const url = `https://gory-phantom-15581.herokuapp.com/user/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

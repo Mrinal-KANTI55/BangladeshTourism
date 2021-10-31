@@ -11,7 +11,7 @@ const SelectOffer = () => {
     const { offerid } = useParams();
     const [offer, setOffer] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:4000/offer/${offerid}`)
+        axios.get(`https://gory-phantom-15581.herokuapp.com/offer/${offerid}`)
             .then(res => {
                 console.log(res.data);
                 setOffer(res.data);
@@ -20,7 +20,7 @@ const SelectOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:4000/user', data)
+        axios.post('https://gory-phantom-15581.herokuapp.com/user', data)
             .then(response => {
                 console.log(response);
                 reset();

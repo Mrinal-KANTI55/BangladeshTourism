@@ -6,7 +6,7 @@ import { Row } from 'react-bootstrap';
 const TourismOffer = () => {
     const [offer, setOffer] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:4000/offer')
+        axios.get('https://gory-phantom-15581.herokuapp.com/offer')
             .then(res => {
                 console.log(res.data);
                 setOffer(res.data);

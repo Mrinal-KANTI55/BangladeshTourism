@@ -6,7 +6,7 @@ const UserBuyOffer = (props) => {
     const handelDelete = id => {
         const conform = window.confirm('Are you sure to delete this Oreder?');
         if (conform) {
-            const url = `http://localhost:4000/user/${id}`;
+            const url = `https://gory-phantom-15581.herokuapp.com/user/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -6,7 +6,7 @@ const AddTourOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:4000/offer', data)
+        axios.post('https://gory-phantom-15581.herokuapp.com/offer', data)
             .then(response => {
                 console.log(response);
                 reset();
@@ -14,7 +14,7 @@ const AddTourOffer = () => {
     }
     const onClick = data => {
         // console.log(data);
-        axios.post('http://localhost:4000/transportInfo', data)
+        axios.post('https://gory-phantom-15581.herokuapp.com/transportInfo', data)
             .then(response => {
                 console.log(response);
                 reset();
